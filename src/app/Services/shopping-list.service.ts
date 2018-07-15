@@ -24,4 +24,9 @@ export class ShoppingListService {
     this.ingredientChanged.emit(this.ingredients.slice());
   }
 
+  addMultiIngredints(ingredients: Ingredient[]) {
+    this.ingredients.push(...ingredients);
+    this.ingredientChanged.emit(this.ingredients.slice());
+  }
+
 }
